@@ -7,6 +7,7 @@
 <title>Test</title>
 </head>
 <body>
+	<!-- 231215 -->
 	<% 
 		// 메소드 정의 불가
 		String name = "홍길동"; 
