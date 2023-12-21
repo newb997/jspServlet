@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <jsp:useBean id="beanTest" class="ch04.BeanTest5"/>
 <jsp:setProperty name="beanTest" property="name" value="자바빈사용" />
+
 <!DOCTYPE html>
 <html>
 <head>

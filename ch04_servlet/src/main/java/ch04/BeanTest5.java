@@ -1,5 +1,5 @@
 package ch04;
-
+// 231219
 public class BeanTest5 {
 	private String name;
 

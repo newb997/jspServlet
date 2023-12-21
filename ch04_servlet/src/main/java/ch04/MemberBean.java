@@ -1,5 +1,5 @@
 package ch04;
-
+//231219
 public class MemberBean {
 	private String id;	//최소 두글자 이상 
 	private String pwd;
