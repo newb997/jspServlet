@@ -1,3 +1,5 @@
+// 231221
+
 // id를 수정후 다시 고쳤는지 확인
 function inputIdChk() {
 	frm.idBtnCheck.value="idUncheck";

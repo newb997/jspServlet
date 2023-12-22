@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<!-- 231221 -->
 <%
 	String id = (String)session.getAttribute("idKey");	// idKey에 해당하는 값 가져오고 String으로 형변환
 	if(id == null) { // 세션에 아무것도 안들어있으면

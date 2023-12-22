@@ -1,5 +1,5 @@
 package mem;
-
+//231221
 import java.sql.*;
 
 public class MemberDao {

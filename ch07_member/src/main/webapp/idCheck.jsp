@@ -13,6 +13,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<!-- 231221 -->
 <%
 	if(result) {
 		out.print(id + "는 이미 존재하는 ID입니다<p/>");

@@ -10,7 +10,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<!-- 231221 -->
 <% if(id != null) { %>
 	<b><%=id %>님 환영합니다.</b>
 	<p>즐거운 하루 되세요</p>
