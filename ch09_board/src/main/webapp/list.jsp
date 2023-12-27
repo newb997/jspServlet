@@ -8,6 +8,9 @@
 </head>
 <body>
 <!-- 231226 -->
+<a href="post.jsp">글쓰기</a>
+
+<a href="read.jsp">글읽기</a>
 
 </body>
 </html>

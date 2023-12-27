@@ -17,6 +17,18 @@ public class Board {
 	public Board() {
 		
 	}
+	
+	
+
+	public Board(String name, String subject, String content, String pass, String ip) {
+		this.name = name;
+		this.subject = subject;
+		this.content = content;
+		this.pass = pass;
+		this.ip = ip;
+	}
+
+
 
 	public Board(int num, String name, String subject, String content, int pos, int ref, int depth, String regdate,
 			String pass, String ip, int count) {

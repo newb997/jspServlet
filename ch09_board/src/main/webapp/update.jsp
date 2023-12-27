@@ -1,5 +1,12 @@
-<!-- <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%> -->
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="board.*" %>
+<%
+	//세션에서 num, 이름 얻어오기
+	int num = Integer.parseInt(request.getParameter("num"));
+	Board board = (Board)session.getAttribute("bean");
+%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,14 +21,14 @@
 </head>
 <body>
 	<!-- 231226 -->
-	<form action="boardPost" method="post">
+	<form action="boardUpdate" method="post">
 		<table align="center" width="700">
 			<tr>
 				<th colspan="2" bgcolor="pink" height="30">수 정 하 기</th>
 			</tr>
 			<tr>
 				<td width="15%">성명</td>
-				<td><input type="text" name="name"></td>
+				<td><%=board.getName() %></td>
 			</tr>
 			<tr>
 				<td>제목</td>
@@ -46,6 +53,7 @@
 				</td>
 			</tr>
 		</table>
+		<input type="hidden" name="num" value="<%=num %>">
 	</form>
 </body>
 </html>
