@@ -31,7 +31,7 @@
 			</tr>
 			<tr>
 				<td>제목</td>
-				<td><input type="text" name="subject" value="답변 : <%=board.getSubject() %>"></td>
+				<td><input name="subject" value="답변 : <%=board.getSubject() %>"></td>
 			</tr>
 			<tr>
 				<td>내용</td>

@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 // 231226
 public class BoardDao {
@@ -182,10 +183,72 @@ public class BoardDao {
 		}
 	}
 	
+	// 게시물의 총 갯수
+	public int getTotalCount(String keyField, String keyWord) {
+		int totalCount = 0;
+		try {
+			con = pool.getConnection();
+			if(keyWord.equals("null") || keyWord.equals("")) {
+				sql = "select count(num) from board";
+				pstmt = con.prepareStatement(sql);
+			} else {
+				sql = "select count(num) from board where " + keyField + " like ?";
+				pstmt = con.prepareStatement(sql);
+				pstmt.setString(1, "%"+keyWord+"%");		
+			}
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				totalCount = rs.getInt(1);
+			}
+		} catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			pool.freeConnection(con, pstmt, rs);
+		}
+		return totalCount;
+	}
 	
 	
 	
-	
+	// 전체 게시글 또는 검색한 게시글 리스트 목록
+	public ArrayList<Board> getBoardList(String keyField, String keyWord, int start, int end) {
+		ArrayList<Board> alist = new ArrayList<Board>();
+		
+		try {
+			con = pool.getConnection();
+			if(keyWord.equals("null") || keyWord.equals("")) {
+				sql = "select * "
+					+ "from (select * from board order by ref desc, pos) "
+					+ "where ROWNUM >= ? AND ROWNUM <= ?";
+				
+				pstmt = con.prepareStatement(sql);
+				pstmt.setInt(1, start);
+				pstmt.setInt(2, end);
+			} else {
+				
+			}
+			rs = pstmt.executeQuery();
+			while(rs.next()) {
+				Board board = new Board();
+				board.setNum(rs.getInt("num"));
+				board.setName(rs.getString("name"));
+				board.setSubject(rs.getString("subject"));
+				board.setContent(rs.getString("content"));
+				board.setPos(rs.getInt("pos"));
+				board.setRef(rs.getInt("ref"));
+				board.setDepth(rs.getInt("depth"));
+				board.setRegdate(rs.getString("regdate"));
+				board.setCount(rs.getInt("count"));
+				alist.add(board);
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			pool.freeConnection(con, pstmt, rs);
+		}
+		return alist;
+	}
 	
 	
 	
