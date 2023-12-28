@@ -49,13 +49,13 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-
+<!-- 231228 -->
 <style type="text/css">
 	h2 {margin-top: 50px;}
 	table{width:900px; margin-top: 30px;}
 	a {text-decoration:none; color:black; cursor:pointer;}
 </style>
-
+<!-- 231228 -->
 <script type="text/javascript">
 	function list() {
 		document.listFrm.action = "list.jsp";

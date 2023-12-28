@@ -183,7 +183,7 @@ public class BoardDao {
 		}
 	}
 	
-	// 게시물의 총 갯수
+	// 게시물의 총 갯수 231228
 	public int getTotalCount(String keyField, String keyWord) {
 		int totalCount = 0;
 		try {
@@ -210,7 +210,7 @@ public class BoardDao {
 	
 	
 	
-	// 전체 게시글 또는 검색한 게시글 리스트 목록
+	// 전체 게시글 또는 검색한 게시글 리스트 목록  231228
 	public ArrayList<Board> getBoardList(String keyField, String keyWord, int start, int end) {
 		ArrayList<Board> alist = new ArrayList<Board>();
 		
