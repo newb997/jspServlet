@@ -6,6 +6,8 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 
+import common.DBConnectionMgr;
+
 // 231226
 public class BoardDao {
 	private DBConnectionMgr pool;
