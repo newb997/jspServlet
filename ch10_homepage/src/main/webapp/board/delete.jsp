@@ -14,8 +14,7 @@
 		if(inputPass.equals(dbPass)) {
 			boolean result = bDao.deleteBoard(num);
 			if(result) {
-				// response.sendRedirect("list.jsp?nowPage="+nowPage);
-				response.sendRedirect("list.jsp");
+				response.sendRedirect("list.jsp?nowPage="+nowPage);
 			} else {
 %>
 				<script>

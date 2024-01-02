@@ -201,7 +201,7 @@
 		<input type="hidden" name="nowPage" value="1">
 	</form>
 	
-	<form method="post" name="readFrm">
+	<form method="get" name="readFrm">	<!-- get으로 해줘야 nowpage뜸 -->
 		<input type="hidden" name="num">
 		<input type="hidden" name="nowPage" value="<%=nowPage %>">
 		<input type="hidden" name="keyField" value="<%=keyField %>">

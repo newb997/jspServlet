@@ -62,7 +62,7 @@
 		<!-- 나의 정보 -->
 		<input type="hidden" name="ip" value="<%=request.getRemoteAddr() %>">
 		
-		<!-- 상세읽기에서 넘어온 정보 -->
+		<!-- 상세읽기에서 넘어온 정보 / 앞에서 넘어온 정보 -->
 		<input type="hidden" name="nowPage" value="<%=nowPage %>">
 		
 		<!-- 부모글의 정보 -->

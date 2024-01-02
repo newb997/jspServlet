@@ -27,13 +27,13 @@ public class BoardUpdateServlet extends HttpServlet {
 		
 		HttpSession session = request.getSession();
 		Board dbBoard = (Board)session.getAttribute("bean");	//db에 있는 pass
-		
-		String nowPage = request.getParameter("nowPage");
 		PrintWriter out = response.getWriter();
+		
+		String nowPage = request.getParameter("nowPage");	// 받아와서
 		String dbPass = dbBoard.getPass();
 		if(inputPass.equals(dbPass)) {
 			new BoardDao().updateBoard(upBoard);
-			response.sendRedirect("read.jsp?num="+num+"&nowPage="+nowPage);
+			response.sendRedirect("read.jsp?num="+num+"&nowPage="+nowPage);		// 넘겨주기
 		} else {
 			out.print("<script>");
 			out.print("alert('비밀번호가 일치하지 않습니다');");

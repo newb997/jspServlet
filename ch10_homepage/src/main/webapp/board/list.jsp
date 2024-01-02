@@ -171,7 +171,6 @@
 			<td colspan="2" align="right">
 				<a href="post.jsp">[글쓰기]</a>&emsp;
 				<a href="javascript:list();">[처음으로]</a>
-				<a href="../index.jsp">[홈으로]</a>
 			</td>
 		</tr>
 		<tr>
@@ -202,7 +201,7 @@
 		<input type="hidden" name="nowPage" value="1">
 	</form>
 	
-	<form method="post" name="readFrm">
+	<form method="get" name="readFrm">	<!-- get으로 해줘야 nowpage뜸 -->
 		<input type="hidden" name="num">
 		<input type="hidden" name="nowPage" value="<%=nowPage %>">
 		<input type="hidden" name="keyField" value="<%=keyField %>">

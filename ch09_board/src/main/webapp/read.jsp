@@ -11,7 +11,7 @@
 	
 	bDao.upCount(num);
 	Board board = bDao.getBoard(num);
-	String d = board.getRegdate();
+	// String d = board.getRegdate();
 	
 	session.setAttribute("bean", board);
 %>
