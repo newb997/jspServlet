@@ -8,6 +8,7 @@
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body>
+	<!-- 240102 -->
 	<h1>AJAX개요</h1>
 	<p>
 		Asynchronous JavaScript And XML의 약자로<br>
