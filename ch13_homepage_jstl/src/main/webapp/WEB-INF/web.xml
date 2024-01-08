@@ -10,7 +10,7 @@
     <servlet-name>BoardPostServlet</servlet-name>
     <url-pattern>/boardPost</url-pattern>
   </servlet-mapping>
-  <display-name>ch10_homepage</display-name>
+  <display-name>ch13_homepage_jstl</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
